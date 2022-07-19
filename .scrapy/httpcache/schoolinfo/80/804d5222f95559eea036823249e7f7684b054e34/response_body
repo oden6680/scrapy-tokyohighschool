@@ -1,0 +1,23 @@
+User-Agent: *
+Disallow: /*/bbs/post/$
+Disallow: /*/bbs/report/$
+Disallow: /*/bbs/select/$
+Disallow: /*/bbs/thanks/$
+Disallow: /*/school/opencampus/post/$
+Disallow: /*/school/pamph/post/$
+Disallow: /*/school/report/$
+Disallow: /*/school/review/sms/$
+Disallow: /*/school/upload/*/$
+Disallow: /*/review/post/$
+Disallow: /*/feature/sms/$
+Disallow: /admin/
+Disallow: /hischool/school/review_club/post/$
+Disallow: /university/deviation/note/$
+
+Sitemap: https://www.minkou.jp/sitemap/
+Sitemap: https://www.minkou.jp/university/sitemap/
+Sitemap: https://www.minkou.jp/vcollege/sitemap/
+Sitemap: https://www.minkou.jp/hischool/sitemap/
+Sitemap: https://www.minkou.jp/junior/sitemap/
+Sitemap: https://www.minkou.jp/primary/sitemap/
+Sitemap: https://www.minkou.jp/kinder/sitemap/
