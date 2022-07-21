@@ -13,7 +13,8 @@ class SchoolinfoSpider(scrapy.Spider):
 
     def parse_item(self, response):
         yield {
-            'highschool':response.css('#container > #contents > #main > div.mod-school > div.mod-school-inner > div.mod-school-r > div.mod-school-top > div.mod-school-name::text').get(),
-            'schoolcaption':response.css('#container > #contents > #main > div.mod-school > div.mod-school-inner > div.mod-school-r > div.mod-school-top > div.mod-school-caption::text').get().replace(/(|)/g,""),
+            'highschool':response.css('#container > #contents > #main > div.mod-school > div.mod-school-inner > div.mod-school-r > div.mod-school-top > h1.mod-school-name::text').get(),
+            'schoolcaption':response.css('#container > #contents > #main > div.mod-school > div.mod-school-inner > div.mod-school-r > div.mod-school-top > div.mod-school-caption::text').get().replace("(","").replace(")",""),
             'hensa':response.css('#container > #contents > #main > div.mod-school > div.mod-school-inner > div.mod-school-r > div.mod-school-bottom > div.mod-school-info > p > span::text').get(),
+            'university': response.css('#main > div.sch-detail-main-box > div.sch-detail-goukakujisseki > table > tbody > tr:nth-child(3) > td.goukakujisseki-school > a::text').get(),
         }
