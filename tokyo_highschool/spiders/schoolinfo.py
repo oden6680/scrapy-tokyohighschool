@@ -27,6 +27,7 @@ class SchoolinfoSpider(scrapy.Spider):
         yield {
             'highschool':response.css('#container > #contents > #main > div.mod-school > div.mod-school-inner > div.mod-school-r > div.mod-school-top > div.mod-school-name::text').get(),
             'schoolcaption':response.css('#container > #contents > #main > div.mod-school > div.mod-school-inner > div.mod-school-r > div.mod-school-top > div.mod-school-caption::text').get().replace("(","").replace(")",""),
+            'schooltype':response.css('#main > div.mod-school > div.mod-school-inner > div.mod-school-r > div.mod-school-top > p > a:nth-child(3)::text').get(),
             'hensa':response.css('#container > #contents > #main > div.mod-school > div.mod-school-inner > div.mod-school-r > div.mod-school-bottom > div.mod-school-info > p > span::text').get(),
             'achievement':university,
         }
